@@ -13,15 +13,49 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using System.Configuration;
+
 namespace Carte_de_Noel_HV.Views
 {
     public partial class cartewindow : Window
     {
+
+        string nom ="";
         public cartewindow()
         {
             InitializeComponent();
             MusicManager.PlayMusic(); 
         }
+
+        private void Valider_Click(object sender, RoutedEventArgs e)
+        {
+            nom = PrenomTextBox.Text;
+
+            //cnfiguration pour stocker le nom
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            configuration.AppSettings.Settings.Remove("NomUtilisateur");
+            configuration.AppSettings.Settings.Add("NomUtilisateur", nom);
+            configuration.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
+
+            if (string.IsNullOrWhiteSpace(nom))
+            {
+                ResultatText.Text = "Veuillez entrer un prénom.";
+            }
+            else
+            {
+                ResultatText.Text = $"Bonjour, {nom} !";
+            }
+            // Crée la nouvelle fenêtre
+            var Calendrier = new calendrier();
+
+            // Affiche la nouvelle fenêtre
+            Calendrier.Show();
+
+            // Ferme la fenêtre actuelle
+            this.Close();
+        }
+    }
     }
 
     public static class MusicManager
@@ -53,6 +87,6 @@ namespace Carte_de_Noel_HV.Views
             player.Stop();
         }
     }
-}
+
 
 

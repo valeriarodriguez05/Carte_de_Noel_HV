@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +13,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.IO;
 
 namespace Carte_de_Noel_HV.Views
 {
@@ -23,7 +24,11 @@ namespace Carte_de_Noel_HV.Views
         public calendrier()
         {
             InitializeComponent();
-            nomUtilisateur = nom;
+
+
+            //recupérer le nom depuis le fichier de configuration
+            Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            nomUtilisateur = configuration.AppSettings.Settings["NomUtilisateur"]?.Value ?? "Invité";
 
             // TEXTE DE BIENVENUE PERSONNALISÉ
             TexteBienvenue.Text =

@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="cartewindow" Height="450" Width="800">
     <Grid>
+        <StackPanel>
+
+            <TextBlock Text="Entrez votre prénom :" 
+                       FontSize="16" 
+                       Margin="0,0,0,10"/>
+
+            <TextBox x:Name="PrenomTextBox" 
+                     Height="30" 
+                     FontSize="14"/>
+
+            <Button Content="Valider"
+                    Height="35"
+                    Margin="0,15,0,0"
+                    Click="Valider_Click"/>
+
+            <TextBlock x:Name="ResultatText"
+                       FontSize="16"
+                       Margin="0,15,0,0"/>
+
+        </StackPanel>
         
     </Grid>
 </Window>
