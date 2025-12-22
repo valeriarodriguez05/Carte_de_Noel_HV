@@ -78,6 +78,7 @@ namespace Carte_de_Noel_HV
             else
             {
                 CountdownText.Text = $"Il reste {joursRestants} jours avant Noël 🎄";
+                CountdownText.Foreground = Brushes.White;
             }
 
         }

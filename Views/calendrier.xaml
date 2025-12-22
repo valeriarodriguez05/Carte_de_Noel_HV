@@ -6,24 +6,23 @@
         xmlns:local="clr-namespace:Carte_de_Noel_HV.Views"
         mc:Ignorable="d"
         Title="calendrier" Height="500" Width="600">
-    <Grid Background="#FFF5E6">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="450">
 
-            <!-- TEXTE DE BIENVENUE PERSONNALISÉ -->
+    <Grid>
+        <!-- Image en fond -->
+        <Image Source="pack://application:,,,/images/rennedenoel.png" Stretch="Fill"/>
+        <Rectangle Fill="#66000000"/>
+        <!-- Contenu par-dessus l'image -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="450">
             <TextBlock x:Name="TexteBienvenue"
                        FontSize="20"
                        FontWeight="Bold"
                        TextAlignment="Center"
                        TextWrapping="Wrap"
                        Margin="0,0,0,25"/>
-
-
-            <!-- Bouton qui ouvre la nouvelle fenêtre -->
             <Button Content="Voir la carte du jour"
                     Height="50"
                     FontSize="18"
                     Click="Button_Click"/>
         </StackPanel>
     </Grid>
-
 </Window>

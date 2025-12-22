@@ -9,6 +9,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\fondnoel.png" />
+    <None Remove="Images\fondnoelflou.png" />
+    <None Remove="Images\rennedenoel.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\fondnoel.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\fondnoelflou.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\rennedenoel.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="assets\sounds\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

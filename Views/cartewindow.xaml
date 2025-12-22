@@ -5,28 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Carte_de_Noel_HV.Views"
         mc:Ignorable="d"
-        Title="cartewindow" Height="450" Width="800">
+        Title="Carte de Noël"
+        Height="450"
+        Width="800"
+        WindowStartupLocation="CenterScreen">
+
+    <!-- 🌄 GRID PRINCIPAL AVEC IMAGE EN ARRIÈRE-PLAN -->
     <Grid>
-        <StackPanel>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/Images/fondnoelflou.png" Stretch="UniformToFill"/>
+        </Grid.Background>
 
-            <TextBlock Text="Entrez votre prénom :" 
-                       FontSize="16" 
-                       Margin="0,0,0,10"/>
+        <!-- 🌑 Voile sombre -->
+        <Rectangle Fill="#66000000"/>
 
-            <TextBox x:Name="PrenomTextBox" 
-                     Height="30" 
-                     FontSize="14"/>
+        <!-- 🎁 CONTENU CENTRÉ -->
+        <Border Background="#AA000000"
+                CornerRadius="15"
+                Padding="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
 
-            <Button Content="Valider"
-                    Height="35"
-                    Margin="0,15,0,0"
-                    Click="Valider_Click"/>
+            <StackPanel Width="300">
 
-            <TextBlock x:Name="ResultatText"
-                       FontSize="16"
-                       Margin="0,15,0,0"/>
+                <TextBlock Text="Entrez votre prénom"
+                           FontSize="22"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,15"/>
 
-        </StackPanel>
-        
+                <TextBox x:Name="PrenomTextBox"
+                         Height="22"
+                         FontSize="16"
+                         HorizontalContentAlignment="Center"/>
+
+                <Button Content="Valider"
+                        Height="40"
+                        Margin="0,20,0,0"
+                        FontSize="16"
+                        Click="Valider_Click"/>
+
+                <TextBlock x:Name="ResultatText"
+                           FontSize="16"
+                           Foreground="White"
+                           Margin="0,20,0,0"
+                           TextAlignment="Center"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>

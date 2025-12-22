@@ -11,10 +11,16 @@
         Background="#1A1A1A"
         WindowStartupLocation="CenterScreen">
 
+
+    <!-- 🌄 GRID PRINCIPAL AVEC IMAGE EN ARRIÈRE-PLAN -->
     <Grid>
-        <Image x:Name="DailyImage"
-               Stretch="Fill"
-               Opacity="0.85"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/fondnoel.png"
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <!-- 🌑 Voile sombre pour lisibilité -->
+        <Rectangle Fill="#55000000"/>
 
         <Grid>
             <Canvas x:Name="SnowCanvas"
@@ -39,18 +45,6 @@
                            Foreground="White"
                            Margin="0,10,0,20"
                            HorizontalAlignment="Center"/>
-
-                <Border Background="#AA000000"
-                        CornerRadius="10"
-                        Padding="20"
-                        Margin="0,20,0,0">
-                    <TextBlock x:Name="TB_Countdown"
-                               Text="00 jours 00:00:00"
-                               FontSize="32"
-                               Foreground="Gold"
-                               FontWeight="SemiBold"
-                               HorizontalAlignment="Center"/>
-                </Border>
 
                 <!-- ⭐ BOUTON CARTE DU JOUR -->
                 <Button x:Name="BtnCarteDuJour"

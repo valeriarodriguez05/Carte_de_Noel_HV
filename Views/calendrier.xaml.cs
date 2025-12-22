@@ -34,11 +34,13 @@ namespace Carte_de_Noel_HV.Views
             TexteBienvenue.Text =
                 "Bienvenue " + nomUtilisateur + " 🎄\n\n" +
                 "Clique sur le bouton ci-dessous pour découvrir la carte du jour !";
+
+            TexteBienvenue.Foreground = Brushes.White;
         }
-        
 
 
-        
+
+
         public static class MusicManager
         {
             private static MediaPlayer player = new MediaPlayer();
