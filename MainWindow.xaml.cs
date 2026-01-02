@@ -29,7 +29,7 @@ namespace Carte_de_Noel_HV
             InitializeComponent();
             StartCountdown(); // Lance le compte à rebours + message
             StartSnow(); // Lance l'animation de neige
-            PlayMusic(); // Lance la musique de Noël
+            //PlayMusic(); // Lance la musique de Noël
         }
 
         private void BtnOuvrirCartePage_Click(object sender, RoutedEventArgs e)
@@ -142,29 +142,29 @@ namespace Carte_de_Noel_HV
             SnowCanvas.Children.Add(flocon);
         }
 
-        ////////////////////////////////////////////🎵 Musique de Noël 🎵////////////////////////////////////////////
-        private void PlayMusic()
-        {
-            try
-            {
-                musicPlayer.MediaEnded -= MusicPlayer_MediaEnded;
-                var uri = new Uri("assets/sounds/music.mp3", UriKind.RelativeOrAbsolute);
-                musicPlayer.Open(uri);
-                musicPlayer.Volume = 0.5; // Volume moyen
-                musicPlayer.MediaEnded += MusicPlayer_MediaEnded;
-                musicPlayer.Play();
-            }
-            catch (Exception)
-            {
-                // Échec d'ouverture / lecture : ignored pour l'instant (ou logger si nécessaire)
-            }
-        }
+        //////////////////////////////////////////🎵 Musique de Noël 🎵////////////////////////////////////////////
+        //private void PlayMusic()
+        //{
+        //    try
+        //    {
+        //        musicPlayer.MediaEnded -= MusicPlayer_MediaEnded;
+        //        var uri = new Uri("assets/sounds/music.mp3", UriKind.RelativeOrAbsolute);
+        //        musicPlayer.Open(uri);
+        //        musicPlayer.Volume = 0.5; // Volume moyen
+        //        musicPlayer.MediaEnded += MusicPlayer_MediaEnded;
+        //        musicPlayer.Play();
+        //    }
+        //    catch (Exception)
+        //    {
+        //        Échec d'ouverture / lecture : ignored pour l'instant(ou logger si nécessaire)
+        //    }
+        //}
 
-        private void MusicPlayer_MediaEnded(object? sender, EventArgs e)
-        {
-            // Remet au début et relance en boucle
-            musicPlayer.Position = TimeSpan.Zero;
-            musicPlayer.Play();
-        }
+        //private void MusicPlayer_MediaEnded(object? sender, EventArgs e)
+        //{
+        //    Remet au début et relance en boucle
+        //    musicPlayer.Position = TimeSpan.Zero;
+        //    musicPlayer.Play();
+        //}
     }
 }

@@ -60,35 +60,28 @@ namespace Carte_de_Noel_HV.Views
             return (carteChoisie, contenuTexte); // On retourne le chemin de l'image + le texte
         }
 
-
-
-        public static class MusicManager
+        private void Case_Click(object sender, RoutedEventArgs e)
         {
-            private static MediaPlayer player = new MediaPlayer();
-            private static bool isInitialized = false;
-
-            public static void PlayMusic()
+            if (sender is Button btn)
             {
-                if (!isInitialized)
+                // Numéro de la case (1 à 24)
+                string numero = btn.Content.ToString();
+
+                try
                 {
-                    var uri = new Uri("assets/sounds/music.mp3", UriKind.RelativeOrAbsolute);
-                    player.Open(uri);
-                    player.Volume = 0.5;
-                    player.MediaEnded += (s, e) =>
-                    {
-                        player.Position = TimeSpan.Zero;
-                        player.Play();
-                    };
+                    var (imagePath, texte) = TirerCarteDuJour();
 
-                    isInitialized = true;
+                    MessageBox.Show(
+                        $"🎄 Carte n°{numero}\n\n{texte}",
+                        "Carte du jour",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Information
+                    );
                 }
-
-                player.Play();
-            }
-
-            public static void StopMusic()
-            {
-                player.Stop();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
