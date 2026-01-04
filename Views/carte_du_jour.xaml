@@ -9,9 +9,14 @@
 	
 	<!-- Image de fond -->
 	<Grid>
-		<Image Source="/Images/pingouindenoel.png" Stretch="Fill"/>
+		
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\vardr\Source\Repos\Carte_de_Noel_HV\Images\pingouindenoel.png"
+                Stretch="Fill"/>
+        </Grid.Background>
 
-		<!-- Grid des étoiles avec marges -->
+
+        <!-- Grid des étoiles avec marges -->
 		<Grid Margin="44,25,44,36">
 			<!-- Colonnes -->
 			<Grid.ColumnDefinitions>

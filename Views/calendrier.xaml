@@ -24,5 +24,10 @@
                     FontSize="18"
                     Click="Button_Click"/>
         </StackPanel>
+        <TextBlock FontSize="20"
+                   TextWrapping="Wrap"
+                   Margin="20"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"/>
     </Grid>
 </Window>

@@ -23,8 +23,8 @@ namespace Carte_de_Noel_HV.Views
 
         public calendrier()
         {
-            InitializeComponent();
-
+            // Correction : Ajout de l'appel à InitializeComponent généré par le designer XAML
+            this.InitializeComponent();
 
             //recupérer le nom depuis le fichier de configuration
             Configuration configuration = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -33,43 +33,10 @@ namespace Carte_de_Noel_HV.Views
             // TEXTE DE BIENVENUE PERSONNALISÉ
             TexteBienvenue.Text =
                 "Bienvenue " + nomUtilisateur + " 🎄\n\n" +
-                "Clique sur le bouton ci-dessous pour découvrir la carte du jour !";
+                "Clique sur le bouton ci-dessous pour découvrir le calendrier !";
 
             TexteBienvenue.Foreground = Brushes.White;
         }
-
-
-
-
-        //public static class MusicManager
-        //{
-        //    private static MediaPlayer player = new MediaPlayer();
-        //    private static bool isInitialized = false;
-
-        //    public static void PlayMusic()
-        //    {
-        //        if (!isInitialized)
-        //        {
-        //            var uri = new Uri("assets/sounds/music.mp3", UriKind.RelativeOrAbsolute);
-        //            player.Open(uri);
-        //            player.Volume = 0.5;
-        //            player.MediaEnded += (s, e) =>
-        //            {
-        //                player.Position = TimeSpan.Zero;
-        //                player.Play();
-        //            };
-
-        //            isInitialized = true;
-        //        }
-
-        //        player.Play();
-        //    }
-
-        //    public static void StopMusic()
-        //    {
-        //        player.Stop();
-        //    }
-        //}
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -83,5 +50,4 @@ namespace Carte_de_Noel_HV.Views
             this.Close();
         }
     }
-    
 }
