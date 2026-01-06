@@ -22,7 +22,7 @@ namespace Carte_de_Noel_HV.Views
         string historiquePath;
 
         Dictionary<string, CarteJour> historique;
-
+        private static Random rnd = new Random();
         public carte_du_jour()
         {
             InitializeComponent();
@@ -90,7 +90,6 @@ namespace Carte_de_Noel_HV.Views
                 return null;
             }
 
-            Random rnd = new Random();
 
             CarteJour carte = new CarteJour
             {
@@ -108,7 +107,7 @@ namespace Carte_de_Noel_HV.Views
         {
             if (sender is Button btn)
             {
-                string jour = btn.Content.ToString();
+                string jour = btn.Tag.ToString();
 
                 CarteJour carte;
                 if (historique.ContainsKey(jour))

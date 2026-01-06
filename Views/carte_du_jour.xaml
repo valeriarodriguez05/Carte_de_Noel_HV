@@ -9,11 +9,12 @@
 	
 	<!-- Image de fond -->
 	<Grid>
-		
+
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\vardr\Source\Repos\Carte_de_Noel_HV\Images\pingouindenoel.png"
+            <ImageBrush ImageSource="/Images/pingouindenoel.png"
                 Stretch="Fill"/>
         </Grid.Background>
+
 
 
         <!-- Grid des étoiles avec marges -->

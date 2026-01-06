@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Images\fondnoel.png" />
     <None Remove="Images\fondnoelflou.png" />
+    <None Remove="Images\pingouindenoel.png" />
     <None Remove="Images\rennedenoel.png" />
   </ItemGroup>
 
@@ -19,6 +20,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\fondnoelflou.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\pingouindenoel.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\rennedenoel.png">
