@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="assets\cartes\cartetest.png" />
+    <None Remove="assets\cartes\cartetest2.png" />
+    <None Remove="assets\textes\Texte1.txt" />
     <None Remove="Images\fondnoel.png" />
     <None Remove="Images\fondnoelflou.png" />
     <None Remove="Images\pingouindenoel.png" />
@@ -16,6 +19,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="assets\cartes\cartetest.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\cartes\cartetest2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="assets\textes\Texte1.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\fondnoel.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
