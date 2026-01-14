@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="assets\historique.json\**" />
+    <EmbeddedResource Remove="assets\historique.json\**" />
+    <None Remove="assets\historique.json\**" />
+    <Page Remove="assets\historique.json\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="assets\cartes\cartetest.png" />
     <None Remove="assets\cartes\cartetest2.png" />
     <None Remove="assets\textes\Texte1.txt" />
@@ -46,10 +53,6 @@
     <None Update="assets\sounds\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="assets\historique.json\" />
   </ItemGroup>
 
 </Project>
